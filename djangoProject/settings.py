@@ -25,7 +25,7 @@ SECRET_KEY = '*e+xj55k10_6ownq#vj7@=+fx$7t7ehbbh9i4$#n)p+!mc8_iq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  # BRUNO: Permite qualquer host
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'templateApp',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +119,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# BRUNO: Habilitar acesso aos arquivos estáticos -------------------
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)  # BRUNO: Indica ao Django onde procurar arquivos estáticos não armazenados em apps específicos
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # BRUNO: Pasta para incluir todos os arquivos estáticos
