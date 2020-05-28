@@ -11,5 +11,6 @@ class templateModel(models.Model):
 # Linha de texto:	models.CharField(max_length=XXX)
 # Sim / Não:		models.BooleanField()
 # Campos de Texto:	models.TextField()
-# Imagens:			models.ImageField(upload_to='/static/uploads')
+# Imagens:			models.ImageField(upload_to='static/uploads')
+# Arquivos:			models.FileField(upload_to='static/uploads')
 # Relacionamento:	models.ForeignKey(NOME_MODELO, on_delete=PROTECT)

@@ -6,3 +6,6 @@ urlpatterns = [
 
 	url(r'^templateView/', views.templateView, name="templateView"),
 ]
+
+# URL com REGEX para buscar apenas um resultado
+# url(r'^DETALHE/(?P<identificador>\w+)', views.DETALHE, name="DETALHE"),
